@@ -34,7 +34,7 @@ Sistema completo de gestión de biblioteca desarrollado como prueba técnica. In
 
 ![Demo del sistema](demo.gif)
 
-**Video explicativo completo:** [Ver en YouTube](#https://youtu.be/-s7rTwL_K68)
+**Video explicativo completo:** [Ver en YouTube](https://youtu.be/-s7rTwL_K68)
 
 ## 📋 Requisitos Previos
 
