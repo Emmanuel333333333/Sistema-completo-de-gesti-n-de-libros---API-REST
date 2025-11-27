@@ -88,7 +88,7 @@ def create_book(book: BookCreate):
             book_id = cursor.lastrowid
             row = conn.execute("SELECT * FROM books WHERE id = ?", (book_id,)).fetchone()
             return dict(row)
-    except Exception as e:
+    except Exception as e: # CATCH 
         raise HTTPException(status_code=500, detail=f"Error creating book: {str(e)}")
 
 @app.get("/books", response_model=List[Book], tags=["Books"])
@@ -98,7 +98,7 @@ def get_books():
         with get_db_connection() as conn:
             rows = conn.execute("SELECT * FROM books").fetchall()
             return [dict(row) for row in rows]
-    except Exception as e:
+    except Exception as e: # CATCH 
         raise HTTPException(status_code=500, detail=f"Error fetching books: {str(e)}")
 
 @app.get("/books/{book_id}", response_model=Book, tags=["Books"])
@@ -112,7 +112,7 @@ def get_book(book_id: int):
             return dict(row)
     except HTTPException:
         raise
-    except Exception as e:
+    except Exception as e: # CATCH 
         raise HTTPException(status_code=500, detail=f"Error fetching book: {str(e)}")
 
 @app.put("/books/{book_id}", response_model=Book, tags=["Books"])
@@ -132,7 +132,7 @@ def update_book(book_id: int, book: BookUpdate):
             return dict(row)
     except HTTPException:
         raise
-    except Exception as e:
+    except Exception as e: # CATCH 
         raise HTTPException(status_code=500, detail=f"Error updating book: {str(e)}")
 
 @app.delete("/books/{book_id}", status_code=status.HTTP_204_NO_CONTENT, tags=["Books"])
@@ -148,7 +148,7 @@ def delete_book(book_id: int):
             return None
     except HTTPException:
         raise
-    except Exception as e:
+    except Exception as e: # CATCH 
         raise HTTPException(status_code=500, detail=f"Error deleting book: {str(e)}")
 
 if __name__ == "__main__":

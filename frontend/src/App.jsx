@@ -41,6 +41,7 @@ import {
 } from '@mui/icons-material';
 import axios from 'axios';
 
+// Configuración de la URL de la API
 const API_URL = 'http://localhost:8000';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
