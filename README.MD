@@ -48,7 +48,7 @@ Sistema completo de gestión de biblioteca desarrollado como prueba técnica. In
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/[tu-usuario]/[tu-repo].git
+git clone https://github.com/Emmanuel333333333/Sistema-completo-de-gesti-n-de-libros---API-REST-Frontend.git
 cd [tu-repo]
 
 # Navegar al backend
